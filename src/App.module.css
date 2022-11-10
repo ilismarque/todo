@@ -1,0 +1,130 @@
+.wrapper {
+  width: 73.6rem;
+  height: 100vh;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 6.4rem;
+}
+
+.inputBox {
+  margin: -25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.inputBox > input {
+  width: 63.8rem;
+  height: 5.4rem;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  padding: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  color: var(--gray-100);
+}
+
+.inputBox > input:focus {
+  border: 1px solid var(--purple-dark);
+  outline: none;
+}
+::placeholder {
+  color: var(--gray-300);
+}
+
+.inputBox > button {
+  width: 9rem;
+  height: 5.2rem;
+  background: var(--blue-dark);
+  border: none;
+  border-radius: 8px;
+  color: var(--gray-100);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.inputBox > button {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 140%;
+}
+
+.inputBox > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.inputBox > button:enabled:hover {
+  background: var(--blue);
+}
+
+.tasks {
+  width: 73.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: 2.4rem;
+}
+
+.info {
+  height: 1.9rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.created,
+.done {
+  display: flex;
+  align-items: center;
+  height: 1.9rem;
+  padding: 0;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.7rem;
+}
+
+.created > strong {
+  color: var(--blue);
+}
+
+.done > strong {
+  color: var(--purple);
+}
+
+.created > span,
+.done > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 1.9rem;
+  background: var(--gray-400);
+  padding: 0.2rem 0.8rem;
+  border-radius: 99rem;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--gray-200);
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}

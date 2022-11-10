@@ -1,0 +1,23 @@
+.wrapper {
+  width: 73.6rem;
+  height: 244px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+  padding: 6.4rem 2.4rem;
+  gap: 1.6rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  text-align: center;
+  color: var(--gray-300);
+}
+
+p:nth-child(1) {
+  font-weight: 700;
+}
