@@ -36,8 +36,14 @@ Para clonar e rodar esse projeto, é necessário ter o [Git](https://git-scm.com
 <br>
 
 Clone este repositório
+
 ```bash
-git clone https://github.com/ilismarque/todo
+git clone https://github.com/ilismarque/todo.git
+```
+ou
+
+```bash
+git clone git@github.com:ilismarque/todo.git
 ```
 
 Instale as dependências (utilizei o npm, mas sinta-se à vontade para utilizar outro gerenciador)
@@ -50,3 +56,7 @@ Rode a aplicação
 npm run dev
 ```
 Acesse [`localhost:5173`](http://localhost:5173) no seu navegador.
+
+## Demo
+
+https://todo-ilismarque.vercel.app/
