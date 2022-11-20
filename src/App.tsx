@@ -14,6 +14,7 @@ export function App() {
 
   const [tasks, setTasks] = useState<TaskProps[]>(tasksInStorage);
   const [newTaskText, setNewTaskText] = useState("");
+  const [taskUuid, setTaskUuid] = useState("");
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
@@ -33,12 +34,39 @@ export function App() {
     setNewTaskText(text.length !== 0 ? event.target.value : "");
   }
 
+  function handleEditTask(event: FormEvent) {
+    event.preventDefault();
+
+    const editedTask = {
+      id: taskUuid,
+      content: newTaskText,
+      isCompleted: false,
+    };
+
+    const newTasksList = tasks.filter((task) => {
+      return task.id !== taskUuid;
+    });
+
+    setTasks([...newTasksList, editedTask]);
+    setNewTaskText("");
+    setTaskUuid("");
+  }
+
   function deleteTask(taskId: string) {
     const newTasksList = tasks.filter((task) => {
       return task.id !== taskId;
     });
 
     setTasks(newTasksList);
+  }
+
+  function editTask(taskId: string) {
+    const taskToEdit = tasks.find((task) => task.id == taskId);
+
+    if (taskToEdit) {
+      setNewTaskText(taskToEdit ? taskToEdit.content : "");
+      setTaskUuid(taskToEdit ? taskToEdit.id : "");
+    }
   }
 
   function completeTask(taskId: string, isCheck: boolean) {
@@ -66,7 +94,10 @@ export function App() {
     <>
       <Header />
       <div className={styles.wrapper}>
-        <form onSubmit={handleCreateNewTask} className={styles.inputBox}>
+        <form
+          onSubmit={taskUuid.length > 0 ? handleEditTask : handleCreateNewTask}
+          className={styles.inputBox}
+        >
           <input
             type="text"
             name="task"
@@ -75,6 +106,7 @@ export function App() {
             placeholder="Adicione uma nova tarefa"
             required
           />
+          <input type="hidden" value={taskUuid} />
           <button type="submit" disabled={isEmptyInput}>
             Criar
             <PlusCircle size={16} weight={"bold"} />
@@ -105,6 +137,7 @@ export function App() {
                     content={task.content}
                     isCompleted={task.isCompleted}
                     onDeleteTask={deleteTask}
+                    onEditTask={editTask}
                     onCompleteTask={completeTask}
                   />
                 );

@@ -11,7 +11,7 @@
 
 ![gif](.github/app.gif)
 
-## 🚀 Tecnologias
+## :hammer_and_wrench: Tecnologias
 
 Esse projeto foi desenvolvido utilizando
 
@@ -23,13 +23,22 @@ Esse projeto foi desenvolvido utilizando
 ## 💻 Projeto
 
 O projeto é uma aplicação de controle de tarefas no estilo to-do list, com as funcionalidades:
-- Adicionar uma nova tarefa
-- Marcar e desmarcar uma tarefa como concluída
-- Remover uma tarefa da listagem
-- Mostrar o progresso de conclusão das tarefas
-- As tarefas são salvas no [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage) do navegador
+#### propostas no desafio
 
-## 🚀 Como executar
+- Adicionar uma nova tarefa :heavy_check_mark:
+- Marcar e desmarcar uma tarefa como concluída :heavy_check_mark:
+- Remover uma tarefa da listagem :heavy_check_mark:
+- Mostrar o progresso de conclusão das tarefas :heavy_check_mark:
+#### funcionalidades extras 🚀
+
+- Editar uma tarefa :heavy_check_mark:
+- Salvar as tarefas no [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage) do navegador :heavy_check_mark:
+
+## Implementações futuras 🚀
+
+- Adicionar responsividade
+- Adicionar alteração de temas (dark-light)
+## :arrow_forward: Como executar
 
 Para clonar e rodar esse projeto, é necessário ter o [Git](https://git-scm.com), e o [Node.js](https://nodejs.org/en/download/) (que vem com o [npm](https://docs.npmjs.com/)) instalados no seu computador.
 

@@ -22,7 +22,7 @@
   text-align: justify;
 
   cursor: pointer;
-  
+
   font-size: 1.4rem;
   line-height: 140%;
   color: var(--gray-100);
@@ -76,7 +76,6 @@
   transform: rotate(45deg);
 }
 
-
 .taskCompleted {
   text-decoration: line-through;
   color: var(--gray-300);
@@ -96,4 +95,20 @@
   border-radius: 4px;
   background: var(--gray-400);
   color: var(--danger);
+}
+
+.edit {
+  border: none;
+  background: transparent;
+  background-position: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  color: var(--gray-300);
+  cursor: pointer;
+}
+
+.edit:hover {
+  border-radius: 4px;
+  background: var(--gray-400);
+  color: var(--blue);
 }
